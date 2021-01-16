@@ -204,8 +204,11 @@ static Key keys[] = {
 
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +3 } },
 	/* { MODKEY|ShiftMask,		XK_z,		spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_x,		incrgaps,	{.i = -3 } },
+	{ MODKEY|ShiftMask,		XK_z,		incrgaps,	{.i = -3 } },
 	/* { MODKEY|ShiftMask,		XK_x,		spawn,		SHCMD("") }, */
+	{ MODKEY,			XK_x,		spawn,		SHCMD("slock & xset dpms force off; mpc pause; pauseallmpv") },
+	{ MODKEY|ShiftMask,		XK_x,		spawn,		SHCMD("prompt 'Shutdown?' 'shutdown now'") },
+	{ MODKEY|ShiftMask,		XK_BackSpace,		spawn,		SHCMD("prompt 'Reboot?' 'reboot'") },
 	/* { MODKEY,			XK_c,		spawn,		SHCMD("") }, */
 	/* { MODKEY|ShiftMask,		XK_c,		spawn,		SHCMD("") }, */
 	/* V is automatically bound above in STACKKEYS */
