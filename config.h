@@ -184,7 +184,8 @@ static Key keys[] = {
 
 	{ MODKEY,			XK_a,		togglegaps,	{0} },
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
-	{ MODKEY,			XK_s,		togglesticky,	{0} }, 
+	/* { MODKEY,			XK_s,		togglesticky,	{0} }, */
+	{ MODKEY,       		XK_v, 		focusmaster,    {0} },
 	{ MODKEY|ShiftMask,		XK_s,		spawn,		SHCMD("stalonetray -c ~/.config/.stalonetrayrc") },
 	{ MODKEY,                       XK_d,      	spawn,          {.v = dmenucmd } },
 	/* { MODKEY,			XK_d,		spawn,		SHCMD("") } }, */
@@ -213,8 +214,8 @@ static Key keys[] = {
 	/* V is automatically bound above in STACKKEYS */
 	{ MODKEY,			XK_b,		togglebar,	{0} },
 	/* { MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("") }, */
-	{ MODKEY|ShiftMask,		XK_v,		spawn,		SHCMD(TERMINAL " -e nvim ~/dox/VimWiki/Scratch.md") },
-	{ MODKEY,			XK_v,		spawn,		SHCMD(TERMINAL " -e nvim -c VimwikiIndex") },
+	{ MODKEY,			XK_s,		spawn,		SHCMD(TERMINAL " -e nvim ~/dox/VimWiki/Scratch.md") },
+	{ MODKEY|ShiftMask,		XK_v,		spawn,		SHCMD(TERMINAL " -e nvim -c VimwikiIndex") },
 	{ MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
 	{ MODKEY,			XK_m,		spawn,		SHCMD(TERMINAL " -e ncmpcpp") },
 	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },
