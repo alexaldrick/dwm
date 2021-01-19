@@ -197,11 +197,10 @@ static Key keys[] = {
 	{ MODKEY,			XK_l,		setmfact,      	{.f = +0.05} },
 	{ MODKEY,			XK_semicolon,	shiftview,	{ .i = 1 } },
 	{ MODKEY|ShiftMask,		XK_semicolon,	shifttag,	{ .i = 1 } },
-	{ MODKEY,			XK_apostrophe,	togglescratch,	{.ui = 1} },
+	/*{ MODKEY,			XK_apostrophe,	togglescratch,	{.ui = 1} },*/
 	/* { MODKEY|ShiftMask,		XK_apostrophe,	spawn,		SHCMD("") }, */
 	{ MODKEY,			XK_Return,	spawn,		{.v = termcmd } },
-	{ MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.ui = 0} },
-
+	/*{ MODKEY|ShiftMask,		XK_Return,	togglescratch,	{.ui = 0} }, */
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +3 } },
 	/* { MODKEY|ShiftMask,		XK_z,		spawn,		SHCMD("") }, */
 	{ MODKEY|ShiftMask,		XK_z,		incrgaps,	{.i = -3 } },
@@ -214,7 +213,7 @@ static Key keys[] = {
 	/* V is automatically bound above in STACKKEYS */
 	{ MODKEY,			XK_b,		togglebar,	{0} },
 	/* { MODKEY|ShiftMask,		XK_b,		spawn,		SHCMD("") }, */
-	{ MODKEY,			XK_n,		spawn,		SHCMD(TERMINAL " -e nvim -c VimwikiIndex") },
+	{ MODKEY,			XK_v,		spawn,		SHCMD(TERMINAL " -e nvim -c VimwikiIndex") },
 	{ MODKEY|ShiftMask,		XK_n,		spawn,		SHCMD(TERMINAL " -e newsboat; pkill -RTMIN+6 dwmblocks") },
 	{ MODKEY,			XK_m,		spawn,		SHCMD(TERMINAL " -e ncmpcpp") },
 	{ MODKEY|ShiftMask,		XK_m,		spawn,		SHCMD("pamixer -t; kill -44 $(pidof dwmblocks)") },

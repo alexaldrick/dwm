@@ -254,7 +254,7 @@ static void tag(const Arg *arg);
 static void tagmon(const Arg *arg);
 static void togglebar(const Arg *arg);
 static void togglefloating(const Arg *arg);
-static void togglescratch(const Arg *arg);
+/* static void togglescratch(const Arg *arg); */  
 static void togglesticky(const Arg *arg);
 static void togglefullscr(const Arg *arg);
 static void toggletag(const Arg *arg);
@@ -1981,7 +1981,7 @@ togglesticky(const Arg *arg)
 	arrange(selmon);
 }
 
-void
+/* void
 togglescratch(const Arg *arg)
 {
 	Client *c;
@@ -2005,7 +2005,7 @@ togglescratch(const Arg *arg)
 		selmon->tagset[selmon->seltags] |= scratchtag;
 		spawn(&sparg);
 	}
-}
+} */
 
 void
 toggletag(const Arg *arg)
